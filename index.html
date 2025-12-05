@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>John Doe | Creative Developer</title>
-    <meta name="description" content="Personal portfolio of John Doe, a Creative Developer specializing in modern web experiences." />
+    <meta name="description" content="个人作品集 - 专注于广告推荐系统、个性化推荐引擎和在线学习平台的开发" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -106,11 +106,110 @@
         <section id="projects" class="section container">
           <div class="section-header">
             <h2 class="section-title">Selected Projects</h2>
+            <div class="project-search">
+              <input type="text" id="project-search" placeholder="搜索项目..." />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </div>
+            <div class="project-filters">
+              <button class="filter-btn active" data-filter="all">全部</button>
+              <button class="filter-btn" data-filter="ad">广告推荐</button>
+              <button class="filter-btn" data-filter="learning">学习平台</button>
+              <button class="filter-btn" data-filter="other">其他</button>
+            </div>
+            <div class="project-stats">
+              <span id="project-count">显示 <strong>7</strong> 个项目</span>
+            </div>
           </div>
           <div class="projects-grid">
-            <article class="project-card">
+            <!-- 广告推荐相关项目 -->
+            <article class="project-card" data-category="ad">
               <div class="project-image">
-                <div class="img-placeholder">Project 1</div>
+                <div class="img-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">智能广告推荐系统</div>
+              </div>
+              <div class="project-info">
+                <h3>智能广告推荐系统</h3>
+                <p>基于机器学习的智能广告推荐平台，通过用户行为分析和实时特征计算，实现精准广告投放，提升CTR和ROI。</p>
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>TensorFlow</span>
+                  <span>Spark</span>
+                  <span>Kafka</span>
+                  <span>Redis</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" target="_blank">Live Demo</a>
+                  <a href="#" target="_blank">GitHub</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-category="ad">
+              <div class="project-image">
+                <div class="img-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">个性化推荐引擎</div>
+              </div>
+              <div class="project-info">
+                <h3>个性化推荐引擎</h3>
+                <p>基于深度学习和协同过滤的推荐系统，支持多场景推荐（内容、商品、视频），提供实时和离线两种推荐策略。</p>
+                <div class="project-tags">
+                  <span>PyTorch</span>
+                  <span>Django</span>
+                  <span>PostgreSQL</span>
+                  <span>Docker</span>
+                  <span>Kubernetes</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" target="_blank">Live Demo</a>
+                  <a href="#" target="_blank">GitHub</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-category="ad">
+              <div class="project-image">
+                <div class="img-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">广告投放优化平台</div>
+              </div>
+              <div class="project-info">
+                <h3>广告投放优化平台</h3>
+                <p>全链路广告投放管理系统，包含预算分配、出价策略、A/B测试、效果分析等功能，帮助广告主实现ROI最大化。</p>
+                <div class="project-tags">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>MongoDB</span>
+                  <span>Elasticsearch</span>
+                  <span>Grafana</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" target="_blank">Live Demo</a>
+                  <a href="#" target="_blank">GitHub</a>
+                </div>
+              </div>
+            </article>
+            <!-- 枪花学习项目 -->
+            <article class="project-card" data-category="learning">
+              <div class="project-image">
+                <div class="img-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white;">枪花学习平台</div>
+              </div>
+              <div class="project-info">
+                <h3>枪花学习平台</h3>
+                <p>综合性在线学习平台，提供课程管理、学习进度跟踪、互动社区、知识图谱等功能，支持个性化学习路径推荐。</p>
+                <div class="project-tags">
+                  <span>Vue.js</span>
+                  <span>Spring Boot</span>
+                  <span>MySQL</span>
+                  <span>WebSocket</span>
+                  <span>微服务</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" target="_blank">Live Demo</a>
+                  <a href="#" target="_blank">GitHub</a>
+                </div>
+              </div>
+            </article>
+            <!-- 原有项目 -->
+            <article class="project-card" data-category="other">
+              <div class="project-image">
+                <div class="img-placeholder">E-Commerce Platform</div>
               </div>
               <div class="project-info">
                 <h3>E-Commerce Platform</h3>
@@ -126,9 +225,9 @@
                 </div>
               </div>
             </article>
-            <article class="project-card">
+            <article class="project-card" data-category="other">
               <div class="project-image">
-                <div class="img-placeholder">Project 2</div>
+                <div class="img-placeholder">Task Management App</div>
               </div>
               <div class="project-info">
                 <h3>Task Management App</h3>
@@ -144,9 +243,9 @@
                 </div>
               </div>
             </article>
-            <article class="project-card">
+            <article class="project-card" data-category="other">
               <div class="project-image">
-                <div class="img-placeholder">Project 3</div>
+                <div class="img-placeholder">Portfolio V1</div>
               </div>
               <div class="project-info">
                 <h3>Portfolio V1</h3>
@@ -189,6 +288,32 @@
           <p>&copy; 2024 John Doe. All rights reserved.</p>
         </div>
       </footer>
+
+      <!-- Project Modal -->
+      <div id="project-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+          <button class="modal-close" aria-label="Close modal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <div class="modal-body">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <div id="modal-tags" class="project-tags"></div>
+            <div id="modal-links" class="project-links"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll to Top Button -->
+      <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 15l-6-6-6 6"/>
+        </svg>
+      </button>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
